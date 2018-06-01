@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	
+</h:head>
+
+<h:body>
+	<h1>Moja strona</h1>
+	<table class="tabela">
+		<tr>
+			<th style="width:200px">kol1           </th>
+			<th style = "width:150px">kol2      dsf</th>
+			<th>kol3</th>
+			<th>kol3</th>
+		</tr>
+		<ui:repeat value="#{menedzer.spolki}" var="spolka">
+			<tr>
+				<td class="kolumna">#{spolka.nazwa}</td>
+				<td><center>#{spolka.symbol}</center></td>
+				<td>#{spolka.ostatnie.cena}</td>
+				<td>#{spolka.ostatnie.zmiana}</td>
+			</tr>
+
+		</ui:repeat>
+	</table>
+</h:body>
+</html>

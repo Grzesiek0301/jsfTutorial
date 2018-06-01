@@ -1,0 +1,39 @@
+#page{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#header{
+	width: 100%;
+	height:100px;
+	border: 1px solid #000;
+	margin-bottom:16px;
+}
+
+#content{
+	width: 100%;
+	height:200px;
+	margin-right:16px;
+	margin-bottom:16px;
+	border: 1px solid #000;
+}
+
+#footer{
+	width: 100%;
+	height:100px;
+	border: 1px solid #000;
+}
+
+.tabela {
+	background-color: red;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: red;
+    border-style: solid;
+    width: 800px;
+}
+
+.kolumna {
+	border-style: solid;
+	}
