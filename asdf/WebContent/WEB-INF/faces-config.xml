@@ -10,6 +10,22 @@
     	<managed-bean-name>menedzer</managed-bean-name>
     	<managed-bean-class>pl.urbanski.notowaniagieldowe.entity.Menedzer</managed-bean-class>
     	<managed-bean-scope>request</managed-bean-scope>
+    	<managed-property>
+    		<property-name>symbolAktywnejSpolki</property-name>
+    		<value>#{param.symbol}</value>
+    	</managed-property>
+    	
+    </managed-bean>
+    
+    <managed-bean>
+    	<managed-bean-name>sektorInfo</managed-bean-name>
+    	<managed-bean-class>pl.urbanski.notowaniagieldowe.entity.SektorInfo</managed-bean-class>
+    	<managed-bean-scope>request</managed-bean-scope>
+    	<managed-property>
+    		<property-name>menedzer</property-name>
+    		<value>#{menedzer}</value>
+    	</managed-property>	
+    
     </managed-bean>
 
 </faces-config>

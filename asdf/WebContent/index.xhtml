@@ -8,27 +8,36 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
-	
 </h:head>
 
 <h:body>
-	<h1>Moja strona</h1>
-	<table class="tabela">
-		<tr>
-			<th style="width:200px">kol1           </th>
-			<th style = "width:150px">kol2      dsf</th>
-			<th>kol3</th>
-			<th>kol3</th>
-		</tr>
-		<ui:repeat value="#{menedzer.spolki}" var="spolka">
+	<ui:component>
+		<h1>Moja strona</h1>
+		
+		<table class="tabela">
 			<tr>
-				<td class="kolumna">#{spolka.nazwa}</td>
-				<td><center>#{spolka.symbol}</center></td>
-				<td>#{spolka.ostatnie.cena}</td>
-				<td>#{spolka.ostatnie.zmiana}</td>
+				<th style="width:200px">Nazwa</th>
+				<th style = "width:150px">Symbol</th>
+				<th>Cena</th>
+				<th>Zmiana</th>
 			</tr>
-
-		</ui:repeat>
-	</table>
+			<ui:repeat value="#{menedzer.spolki}" var="spolka">
+				<tr>
+					<td class="kolumna">#{spolka.nazwa}</td>
+					<td>
+						<h:outputLink value="historia.xhtml">
+							<f:param name="symbol" value="#{spolka.symbol}" />
+							<h:outputText value="#{spolka.symbol}"/>
+						</h:outputLink>
+						
+					</td>
+					<td>#{spolka.ostatnie.cena}</td>
+					<td>#{spolka.ostatnie.zmiana}</td>
+				</tr>
+	
+			</ui:repeat>
+		</table>
+		<h:outputLink value = "sektory.xhtml">Info o sektorach</h:outputLink>
+	</ui:component>
 </h:body>
 </html>
