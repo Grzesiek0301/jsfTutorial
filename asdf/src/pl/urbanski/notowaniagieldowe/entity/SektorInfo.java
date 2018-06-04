@@ -7,7 +7,7 @@ public class SektorInfo {
 
 	private Menedzer menedzer;
 	private Map<String, Double> ceny;
-	
+//	komentarz drugi
 	public Menedzer getMenedzer() {
 		return menedzer;
 	}

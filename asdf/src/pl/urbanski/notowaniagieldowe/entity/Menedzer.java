@@ -12,7 +12,8 @@ public class Menedzer {
 	public Menedzer() {
 		spolki = new ArrayList<>(3);
 		Date d = new Date();
-		// komentarz4
+
+
 //		komentarz pierwszy
 		spolki.add(new Spolka("Kocia spolka weglowa", "KSW", "energetyczny", 20.0, 11.1, d));
 		spolki.add(new Spolka("KitKompDotCom", "KKDC", "informatyczny", 90.0, 3.4, d));
